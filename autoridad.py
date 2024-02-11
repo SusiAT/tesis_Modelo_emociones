@@ -12,6 +12,7 @@ from owlready2 import *
 import matplotlib.pyplot as plt
 import networkx as nx
 from sklearn.cluster import KMeans
+import pandas as pd
 
 
 
@@ -64,7 +65,9 @@ def mostrar_nombres_de_archivos(ruta_directorio):
         #cont = 0
         print("pase")
 
-        while True:
+        #while True:
+        for i in range(1, 3601):
+            print("Valor de i es:  ",i)
             ret,frame = camera.read()
             if ret:
                 #reading the frame
@@ -144,11 +147,11 @@ def mostrar_nombres_de_archivos(ruta_directorio):
             cv2.imshow("Probabilities", canvas)
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
-        else:
-            break
+        #else:
+         #   break
 
         camera.release()
-        cv2.destroyAllWindows()
+        cv2.destroyAllWindows() 
         f.close()
 
        
@@ -243,6 +246,7 @@ def mostrar_nombres_de_archivos(ruta_directorio):
 
         # Mostrar los resultados
         print("\nResultados:")
+        f = open(rutaalnuevo+"/resultadosKmeans.txt", 'w')
         for i, (emocion, valor, instancias, clasificacion) in enumerate(zip(emociones_cluster, valores_cluster, instancias_cluster, clasificacion_emociones)):
             print(f"Cluster {i + 1}: Emoción: {emocion}, Valor: {valor}, Instancias: {instancias}, Clasificación: {clasificacion}, Centroides:{centroides[i]}")
             text2="Cluster: " + str(i+1)+ " Emoción: "+ emocion + " Valor: " + str(valor) + " Instancias:" + str(instancias)+ " Clasificación:"+ clasificacion + " Centroides:" + str(centroides[i])
