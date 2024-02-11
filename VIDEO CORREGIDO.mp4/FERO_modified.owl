@@ -1,0 +1,937 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO"
+         xmlns="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#"
+         xmlns:ace_="http://attempto.ifi.uzh.ch/ace_lexicon#"
+         xmlns:HASO="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#">
+
+<owl:Ontology rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO">
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ontology for the  Affective States  ( Emotion , Mood, Sentiment )  Causes and Reaction 
+
+Is it a  sub-ontology from  Human Affective States  Ontology(HASO)</rdfs:comment>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ontology for the  Affective States  ( Emotion , Mood, Sentiment )  Recognition Method 
+
+Is it a  sub-ontology from  Human Affective States  Ontology(HASO)</rdfs:comment>
+</owl:Ontology>
+
+<owl:ObjectProperty rdf:about="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#causes">
+  <owl:inverseOf rdf:resource="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#isCausedBy"/>
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Affective_State_Cause"/>
+        <rdf:Description rdf:about="#Emotion_Causes"/>
+        <rdf:Description rdf:about="#Mood_Causes"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Affective_State"/>
+        <rdf:Description rdf:about="#Emotion"/>
+        <rdf:Description rdf:about="#Mood"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#isCausedBy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Affective_State"/>
+        <rdf:Description rdf:about="#Emotion"/>
+        <rdf:Description rdf:about="#Mood"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Affective_State_Cause"/>
+        <rdf:Description rdf:about="#Emotion_Causes"/>
+        <rdf:Description rdf:about="#Mood_Causes"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <ace_:TV_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isCausedBy</ace_:TV_pl>
+  <ace_:TV_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isCausedBies</ace_:TV_sg>
+  <ace_:TV_vbg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isCausedBied</ace_:TV_vbg>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#hasActionTendency">
+  <owl:inverseOf rdf:resource="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#isActionTendencyOf"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+  <rdfs:domain rdf:resource="#Emotion"/>
+  <rdfs:range rdf:resource="#ActionTendency"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#isActionTendencyOf">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+  <rdfs:domain rdf:resource="#ActionTendency"/>
+  <rdfs:range rdf:resource="#Emotion"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#hasDuration">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Affective_State"/>
+        <rdf:Description rdf:about="#Emotion"/>
+        <rdf:Description rdf:about="#Mood"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#duration"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:Restriction>
+  </rdfs:range>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#isDetectedFrom">
+  <owl:inverseOf rdf:resource="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#isSourceToDetect"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Affective_State"/>
+        <rdf:Description rdf:about="#Emotion"/>
+        <rdf:Description rdf:about="#Mood"/>
+        <rdf:Description rdf:about="#Sentiment"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Affective_State_Recognition"/>
+        <rdf:Description rdf:about="#Emotion_Recognition"/>
+        <rdf:Description rdf:about="#Mood_Recognition"/>
+        <rdf:Description rdf:about="#Sentiment_Recognition"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#isSourceToDetect">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Affective_State_Recognition"/>
+        <rdf:Description rdf:about="#Emotion_Recognition"/>
+        <rdf:Description rdf:about="#Mood_Recognition"/>
+        <rdf:Description rdf:about="#Sentiment_Recognition"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Affective_State"/>
+        <rdf:Description rdf:about="#Emotion"/>
+        <rdf:Description rdf:about="#Mood"/>
+        <rdf:Description rdf:about="#Sentiment"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#duration">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Emotion"/>
+        <rdf:Description rdf:about="#Mood"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range rdf:resource="http://org.semanticweb.owlapi/error#Error1"/>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+      <owl:withRestrictions>
+        <rdf:Description>
+          <rdf:first>
+            <rdf:Description>
+              <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+            </rdf:Description>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <rdf:Description>
+                  <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</xsd:maxInclusive>
+                </rdf:Description>
+              </rdf:first>
+              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </owl:withRestrictions>
+    </rdfs:Datatype>
+  </rdfs:range>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#appraisal">
+  <rdfs:domain rdf:resource="#Appraisal"/>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+      <owl:withRestrictions>
+        <rdf:Description>
+          <rdf:first>
+            <rdf:Description>
+              <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</xsd:minExclusive>
+            </rdf:Description>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <rdf:Description>
+                  <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:maxExclusive>
+                </rdf:Description>
+              </rdf:first>
+              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </owl:withRestrictions>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Describe positive or negative values of the properties</rdfs:comment>
+</owl:DatatypeProperty>
+
+<owl:AnnotationProperty rdf:about="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+
+<owl:AnnotationProperty rdf:about="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+
+<owl:AnnotationProperty rdf:about="http://attempto.ifi.uzh.ch/ace_lexicon#TV_pl"/>
+
+<owl:AnnotationProperty rdf:about="http://attempto.ifi.uzh.ch/ace_lexicon#TV_sg"/>
+
+<owl:AnnotationProperty rdf:about="http://attempto.ifi.uzh.ch/ace_lexicon#TV_vbg"/>
+
+<owl:Class rdf:about="#Affective_State_Cause"/>
+
+<owl:Class rdf:about="#Emotion_Causes">
+  <rdfs:subClassOf rdf:resource="#Affective_State_Cause"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#causes"/>
+      <owl:someValuesFrom rdf:resource="#Emotion"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Emotion_Causeses</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Emotion_Causes</ace_:CN_sg>
+</owl:Class>
+
+<owl:Class rdf:about="#Mood_Causes">
+  <rdfs:subClassOf rdf:resource="#Affective_State_Cause"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#causes"/>
+      <owl:someValuesFrom rdf:resource="#Mood"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Affective_State">
+  <rdfs:subClassOf rdf:resource="#Mental-State"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#isCausedBy"/>
+      <owl:someValuesFrom rdf:resource="#Affective_State_Cause"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#isDetectedFrom"/>
+      <owl:someValuesFrom rdf:resource="#Affective_State_Recognition"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf rdf:resource="#Mental_State"/>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Affective_stateses</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Affective_states</ace_:CN_sg>
+</owl:Class>
+
+<owl:Class rdf:about="#Emotion">
+  <rdfs:subClassOf rdf:resource="#Affective_State"/>
+  <rdfs:subClassOf rdf:resource="#Mood_Causes"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#hasActionTendency"/>
+          <owl:someValuesFrom rdf:resource="#ActionTendency"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#isCausedBy"/>
+          <owl:someValuesFrom rdf:resource="#Emotion_Causes"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#isDetectedFrom"/>
+      <owl:someValuesFrom rdf:resource="#Emotion_Recognition"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Emotion is the result of a person’s exposure to an internal or external stimulus and is expressed by changes in facial expression, gesture, voice or physiological parameters</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Emotion</ace_:CN_sg>
+</owl:Class>
+
+<owl:Class rdf:about="#Mood">
+  <rdfs:subClassOf rdf:resource="#Affective_State"/>
+  <rdfs:subClassOf rdf:resource="#Emotion_Causes"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#isCausedBy"/>
+      <owl:someValuesFrom rdf:resource="#Mood_Causes"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#isDetectedFrom"/>
+      <owl:someValuesFrom rdf:resource="#Mood_Recognition"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moods</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mood</ace_:CN_sg>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mood is an emotional state that affects the experience and behavior of a person. It has a lower intensity but a longer duration than emotion</rdfs:comment>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">emotional state</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#ActionTendency">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#isActionTendencyOf"/>
+      <owl:someValuesFrom rdf:resource="#Emotion"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <owl:disjointWith rdf:resource="#Affective_State_Cause"/>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ActionTendencies</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ActionTendency</ace_:CN_sg>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Emotions have a strong influence on the motivational state of a subject. Emotion theory associates emotions to a small set of so-called action tendencies, e.g. avoidance (relates to fear), rejecting (disgust) etc. Action tendencies can be viewed as a link between the outcome of an appraisal process and actual actions.</rdfs:comment>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Import From HEO</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Action Tendency</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Sentiment">
+  <rdfs:subClassOf rdf:resource="#Affective_State"/>
+  <rdfs:subClassOf rdf:resource="#Emotion_Causes"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#isDetectedFrom"/>
+      <owl:someValuesFrom rdf:resource="#Sentiment_Recognition"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a view of or attitude toward a situation or event; an opinion</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#Affective_State_Recognition">
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#isSourceToDetect"/>
+          <owl:someValuesFrom rdf:resource="#Affective_State"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ways to detect or recognize Affective States</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#Emotion_Recognition">
+  <rdfs:subClassOf rdf:resource="#Affective_State_Recognition"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#isSourceToDetect"/>
+      <owl:someValuesFrom rdf:resource="#Emotion"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Emotion_Recognitions</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Emotion_Recognition</ace_:CN_sg>
+</owl:Class>
+
+<owl:Class rdf:about="#Mood_Recognition">
+  <rdfs:subClassOf rdf:resource="#Affective_State_Recognition"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#isSourceToDetect"/>
+      <owl:someValuesFrom rdf:resource="#Mood"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Sentiment_Recognition">
+  <rdfs:subClassOf rdf:resource="#Affective_State_Recognition"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#isSourceToDetect"/>
+      <owl:someValuesFrom rdf:resource="#Sentiment"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Appraisal">
+  <rdfs:subClassOf rdf:resource="#Emotion_Causes"/>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Appraisals</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Appraisal</ace_:CN_sg>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apprisal means emotions are elicited and differentiated on the basis of a person's subjective evaluation</rdfs:comment>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Defnition  from " Appraisal Theory" By "Klaus R. Scherer"</rdfs:comment>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cognitive</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#Aesthetic">
+  <rdfs:subClassOf rdf:resource="#Goals/needs"/>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aesthetics</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aesthetic</ace_:CN_sg>
+</owl:Class>
+
+<owl:Class rdf:about="#Goals/needs">
+  <rdfs:subClassOf rdf:resource="#Appraisal"/>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Goals/needs</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Goals/needs</ace_:CN_sg>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The significance of the event for the individual's needs or goals</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#Mental-State">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A mental state is a state of mind</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#Agency">
+  <rdfs:subClassOf rdf:resource="#Appraisal"/>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Agencies</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Agency</ace_:CN_sg>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The individual's ability to influence or cope with the consequences of the event</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#Approach">
+  <rdfs:subClassOf rdf:resource="#Frijda_Action_Tendency"/>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Approaches</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Approach</ace_:CN_sg>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Approach (FrijdaActionTendency ) [aimed towards access and consummatory activity, related to desire]</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Approach</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Frijda_Action_Tendency">
+  <rdfs:subClassOf rdf:resource="#ActionTendency"/>
+  <rdfs:subClassOf rdf:resource="#Action_Tendency"/>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FrijdaActionTendencies</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FrijdaActionTendency</ace_:CN_sg>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An action tendency defined by Nico Frijda, who also coined the term 'action tendency'</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#Attending">
+  <rdfs:subClassOf rdf:resource="#Frijda_Action_Tendency"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Avoidance">
+  <rdfs:subClassOf rdf:resource="#Frijda_Action_Tendency"/>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Avoidances</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Avoidance</ace_:CN_sg>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Avoidance (FrijdaActionTendency ) [aimed towards own inaccessibility and protection, related to fear]</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Avoidance</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Beingwith">
+  <rdfs:subClassOf rdf:resource="#Frijda_Action_Tendency"/>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Being-withs</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Being-with</ace_:CN_sg>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Being with (FrijdaActionTendency ) [aimed at contact and interaction, related to enjoyment]</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Being with</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Blood_Volume_Pulse_Sensor">
+  <rdfs:subClassOf rdf:resource="#Physiological_Sensor"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Physiological_Sensor">
+  <rdfs:subClassOf rdf:resource="#Sensor"/>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sensor_(Physiological_)</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sensor_(Physiological_)</ace_:CN_sg>
+</owl:Class>
+
+<owl:Class rdf:about="#Cognitive">
+  <rdfs:subClassOf rdf:resource="#Goals/needs"/>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cognitives</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cognitive</ace_:CN_sg>
+</owl:Class>
+
+<owl:Class rdf:about="#Contagion">
+  <rdfs:subClassOf rdf:resource="#Emotion_Causes"/>
+  <rdfs:subClassOf rdf:resource="#Mood_Causes"/>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cotagions</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cotagion</ace_:CN_sg>
+</owl:Class>
+
+<owl:Class rdf:about="#Dominating">
+  <rdfs:subClassOf rdf:resource="#Frijda_Action_Tendency"/>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dominatings</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dominating</ace_:CN_sg>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dominating (FrijdaActionTendency ) [aimed at retained control, related to arrogance]</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dominating</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Electrocardiogram_Sensor">
+  <rdfs:subClassOf rdf:resource="#Physiological_Sensor"/>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electrocardiogram_sensors</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electrocardiogram_sensor</ace_:CN_sg>
+</owl:Class>
+
+<owl:Class rdf:about="#Electromyography_Sensor">
+  <rdfs:subClassOf rdf:resource="#Physiological_Sensor"/>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electromyography__Sensors</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electromyography__Sensor</ace_:CN_sg>
+</owl:Class>
+
+<owl:Class rdf:about="#Esteem">
+  <rdfs:subClassOf rdf:resource="#Goals/needs"/>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esteems</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esteem</ace_:CN_sg>
+</owl:Class>
+
+<owl:Class rdf:about="#Facial_Recognition">
+  <rdfs:subClassOf rdf:resource="#Mobile_Device"/>
+  <rdfs:subClassOf rdf:resource="#Recorded_Video"/>
+  <rdfs:subClassOf rdf:resource="#Still_Image"/>
+  <rdfs:subClassOf rdf:resource="#Surveillance_Camera"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Mobile_Device">
+  <rdfs:subClassOf rdf:resource="#Emotion_Recognition"/>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mobile_Device_(_Voice,_facical,_gestures)</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mobile_Device_(_Voice,_facical,_gestures)</ace_:CN_sg>
+</owl:Class>
+
+<owl:Class rdf:about="#Recorded_Video">
+  <rdfs:subClassOf rdf:resource="#Emotion_Recognition"/>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Viedo_(_Voice,_facical,_gestures)</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Viedo_(_Voice,_facical,_gestures)</ace_:CN_sg>
+</owl:Class>
+
+<owl:Class rdf:about="#Still_Image">
+  <rdfs:subClassOf rdf:resource="#Emotion_Recognition"/>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Still_Image_(_facical)</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Still_Image_(_facical)</ace_:CN_sg>
+</owl:Class>
+
+<owl:Class rdf:about="#Surveillance_Camera">
+  <rdfs:subClassOf rdf:resource="#Emotion_Recognition"/>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Camera_(_Voice,_facical,_gestures)</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Camera_(_Voice,_facical,_gestures)</ace_:CN_sg>
+</owl:Class>
+
+<owl:Class rdf:about="#Gestures_Recognition">
+  <rdfs:subClassOf rdf:resource="#Mobile_Device"/>
+  <rdfs:subClassOf rdf:resource="#Recorded_Video"/>
+  <rdfs:subClassOf rdf:resource="#Surveillance_Camera"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Haptic-Devices">
+  <rdfs:subClassOf rdf:resource="#Emotion_Recognition"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Heart_Rate_Sensor">
+  <rdfs:subClassOf rdf:resource="#Physiological_Sensor"/>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Heart_Rate_Sensors</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Heart_Rate_Sensor</ace_:CN_sg>
+</owl:Class>
+
+<owl:Class rdf:about="#Interrupting">
+  <rdfs:subClassOf rdf:resource="#Frijda_Action_Tendency"/>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interruptings</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interrupting</ace_:CN_sg>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interrupting (FrijdaActionTendency ) [aimed at reorientation, related to shock and surprise]</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interrupting</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Mobile_Brainwave_Sensors">
+  <rdfs:subClassOf rdf:resource="#Neurological_Response_Sensor"/>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mobile_brainwave_sensors_(EEG)</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mobile_brainwave_sensors_(EEG)</ace_:CN_sg>
+</owl:Class>
+
+<owl:Class rdf:about="#Neurological_Response_Sensor">
+  <rdfs:subClassOf rdf:resource="#Sensor"/>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sensor_(Neurological_Response_)</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sensor_(Neurological_Response_)</ace_:CN_sg>
+</owl:Class>
+
+<owl:Class rdf:about="#Sensor">
+  <rdfs:subClassOf rdf:resource="#Emotion_Recognition"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Nonattending">
+  <rdfs:subClassOf rdf:resource="#Frijda_Action_Tendency"/>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nonattendings</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nonattending</ace_:CN_sg>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nonattending (FrijdaActionTendency ) [aimed at selecting, related to indifference]</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nonattending</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Novelty">
+  <rdfs:subClassOf rdf:resource="#Appraisal"/>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Novelties</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Novelty</ace_:CN_sg>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intrinsic characteristics of objects or events, such as novelty or agreeableness</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#Physiological">
+  <rdfs:subClassOf rdf:resource="#Goals/needs"/>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Physiologicals</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Physiological</ace_:CN_sg>
+</owl:Class>
+
+<owl:Class rdf:about="#Previous_Emotion_State">
+  <rdfs:subClassOf rdf:resource="#Emotion_Causes"/>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Previous_Emotion_States</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Previous_Emotion_State</ace_:CN_sg>
+</owl:Class>
+
+<owl:Class rdf:about="#Rejecting">
+  <rdfs:subClassOf rdf:resource="#Frijda_Action_Tendency"/>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rejectings</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rejecting</ace_:CN_sg>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rejecting (FrijdaActionTendency ) [aimed at removal of object, related to disgust]</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rejecting</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Respiration_Sensor">
+  <rdfs:subClassOf rdf:resource="#Physiological_Sensor"/>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">respiration_sensors</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">respiration_sensor</ace_:CN_sg>
+</owl:Class>
+
+<owl:Class rdf:about="#Saftey_and_security">
+  <rdfs:subClassOf rdf:resource="#Goals/needs"/>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saftey_and_securities</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saftey_and_security</ace_:CN_sg>
+</owl:Class>
+
+<owl:Class rdf:about="#Self_actualization">
+  <rdfs:subClassOf rdf:resource="#Goals/needs"/>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Self_actualizations</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Self_actualization</ace_:CN_sg>
+</owl:Class>
+
+<owl:Class rdf:about="#Skin_Conductance_Response_Sensor">
+  <rdfs:subClassOf rdf:resource="#Physiological_Sensor"/>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Skin_Conductance_Response_Sensors</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Skin_Conductance_Response_Sensor</ace_:CN_sg>
+</owl:Class>
+
+<owl:Class rdf:about="#Skin_Conductivity_Sensor">
+  <rdfs:subClassOf rdf:resource="#Physiological_Sensor"/>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">skin_conductivity,_BVP_and_temperature_sensor</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">skin_conductivity,_BVP_and_temperature_sensor</ace_:CN_sg>
+</owl:Class>
+
+<owl:Class rdf:about="#Skin_Temperature_Sensor">
+  <rdfs:subClassOf rdf:resource="#Physiological_Sensor"/>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Skin_Temperature_Sensors</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Skin_Temperature_Sensor</ace_:CN_sg>
+</owl:Class>
+
+<owl:Class rdf:about="#Smart_Phone">
+  <rdfs:subClassOf rdf:resource="#Mood_Recognition"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Social_Media">
+  <rdfs:subClassOf rdf:resource="#Emotion_Recognition"/>
+  <rdfs:subClassOf rdf:resource="#Mood_Recognition"/>
+  <rdfs:subClassOf rdf:resource="#Sentiment_Recognition"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Submitting">
+  <rdfs:subClassOf rdf:resource="#Frijda_Action_Tendency"/>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Submittings</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Submitting</ace_:CN_sg>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Submitting (FrijdaActionTendency ) [aimed at deflecting pressure, related to humility and resignation]</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Submitting</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Transcendence">
+  <rdfs:subClassOf rdf:resource="#Goals/needs"/>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Transcendences</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Transcendence</ace_:CN_sg>
+</owl:Class>
+
+<owl:Class rdf:about="#Voice_Recognition">
+  <rdfs:subClassOf rdf:resource="#Mobile_Device"/>
+  <rdfs:subClassOf rdf:resource="#Recorded_Video"/>
+  <rdfs:subClassOf rdf:resource="#Surveillance_Camera"/>
+  <rdfs:subClassOf rdf:resource="#recorded_Voice"/>
+</owl:Class>
+
+<owl:Class rdf:about="#recorded_Voice">
+  <rdfs:subClassOf rdf:resource="#Emotion_Recognition"/>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recorded_voice_(_voice)</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recorded_voice_(_voice)</ace_:CN_sg>
+</owl:Class>
+
+<owl:Class rdf:about="#Norms/Values">
+  <rdfs:subClassOf rdf:resource="#Appraisal"/>
+  <ace_:CN_pl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Norms/Values</ace_:CN_pl>
+  <ace_:CN_sg rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Norms/Values</ace_:CN_sg>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The compatibility of the event with social or personal standards, norms, or values.</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.semanticweb.org/rabaa006/ontologies/2017/10/Affective_States_Recognition#IRejecting"/>
+
+<owl:Class rdf:about="#Mental_State">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Action_Tendency">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Agonistic">
+  <rdfs:subClassOf rdf:resource="#Frijda_Action_Tendency"/>
+</owl:Class>
+
+<owl:Class rdf:about="#BeingWith">
+  <rdfs:subClassOf rdf:resource="#Frijda_Action_Tendency"/>
+</owl:Class>
+
+<owl:Class rdf:about="#NoAttending">
+  <rdfs:subClassOf rdf:resource="#Frijda_Action_Tendency"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#fr">
+  <rdf:type rdf:resource="#Facial_Recognition"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#neutral">
+  <rdf:type rdf:resource="#Emotion"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#noattending1">
+  <rdf:type rdf:resource="#NoAttending"/>
+  <HASO:isActionTendencyOf rdf:resource="#neutral"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#angry">
+  <rdf:type rdf:resource="#Emotion"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#agonistic1">
+  <rdf:type rdf:resource="#Agonistic"/>
+  <HASO:isActionTendencyOf rdf:resource="#angry"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#noattending2">
+  <rdf:type rdf:resource="#NoAttending"/>
+  <HASO:isActionTendencyOf rdf:resource="#neutral"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#happy">
+  <rdf:type rdf:resource="#Emotion"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#approach1">
+  <rdf:type rdf:resource="#Approach"/>
+  <HASO:isActionTendencyOf rdf:resource="#happy"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#approach2">
+  <rdf:type rdf:resource="#Approach"/>
+  <HASO:isActionTendencyOf rdf:resource="#happy"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#noattending3">
+  <rdf:type rdf:resource="#NoAttending"/>
+  <HASO:isActionTendencyOf rdf:resource="#neutral"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#noattending4">
+  <rdf:type rdf:resource="#NoAttending"/>
+  <HASO:isActionTendencyOf rdf:resource="#neutral"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#noattending5">
+  <rdf:type rdf:resource="#NoAttending"/>
+  <HASO:isActionTendencyOf rdf:resource="#neutral"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#noattending6">
+  <rdf:type rdf:resource="#NoAttending"/>
+  <HASO:isActionTendencyOf rdf:resource="#neutral"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#noattending7">
+  <rdf:type rdf:resource="#NoAttending"/>
+  <HASO:isActionTendencyOf rdf:resource="#neutral"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#approach3">
+  <rdf:type rdf:resource="#Approach"/>
+  <HASO:isActionTendencyOf rdf:resource="#happy"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#agonistic2">
+  <rdf:type rdf:resource="#Agonistic"/>
+  <HASO:isActionTendencyOf rdf:resource="#angry"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#noattending8">
+  <rdf:type rdf:resource="#NoAttending"/>
+  <HASO:isActionTendencyOf rdf:resource="#neutral"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#noattending9">
+  <rdf:type rdf:resource="#NoAttending"/>
+  <HASO:isActionTendencyOf rdf:resource="#neutral"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#noattending10">
+  <rdf:type rdf:resource="#NoAttending"/>
+  <HASO:isActionTendencyOf rdf:resource="#neutral"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#noattending11">
+  <rdf:type rdf:resource="#NoAttending"/>
+  <HASO:isActionTendencyOf rdf:resource="#neutral"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#noattending12">
+  <rdf:type rdf:resource="#NoAttending"/>
+  <HASO:isActionTendencyOf rdf:resource="#neutral"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#noattending13">
+  <rdf:type rdf:resource="#NoAttending"/>
+  <HASO:isActionTendencyOf rdf:resource="#neutral"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#noattending14">
+  <rdf:type rdf:resource="#NoAttending"/>
+  <HASO:isActionTendencyOf rdf:resource="#neutral"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#noattending15">
+  <rdf:type rdf:resource="#NoAttending"/>
+  <HASO:isActionTendencyOf rdf:resource="#neutral"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sad">
+  <rdf:type rdf:resource="#Emotion"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#noattending16">
+  <rdf:type rdf:resource="#NoAttending"/>
+  <HASO:isActionTendencyOf rdf:resource="#sad"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#noattending17">
+  <rdf:type rdf:resource="#NoAttending"/>
+  <HASO:isActionTendencyOf rdf:resource="#neutral"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#scared">
+  <rdf:type rdf:resource="#Emotion"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#avoidance1">
+  <rdf:type rdf:resource="#Avoidance"/>
+  <HASO:isActionTendencyOf rdf:resource="#scared"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#approach4">
+  <rdf:type rdf:resource="#Approach"/>
+  <HASO:isActionTendencyOf rdf:resource="#happy"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#noattending18">
+  <rdf:type rdf:resource="#NoAttending"/>
+  <HASO:isActionTendencyOf rdf:resource="#neutral"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#noattending19">
+  <rdf:type rdf:resource="#NoAttending"/>
+  <HASO:isActionTendencyOf rdf:resource="#neutral"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#avoidance2">
+  <rdf:type rdf:resource="#Avoidance"/>
+  <HASO:isActionTendencyOf rdf:resource="#scared"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#noattending20">
+  <rdf:type rdf:resource="#NoAttending"/>
+  <HASO:isActionTendencyOf rdf:resource="#neutral"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#noattending21">
+  <rdf:type rdf:resource="#NoAttending"/>
+  <HASO:isActionTendencyOf rdf:resource="#neutral"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#approach5">
+  <rdf:type rdf:resource="#Approach"/>
+  <HASO:isActionTendencyOf rdf:resource="#happy"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#noattending22">
+  <rdf:type rdf:resource="#NoAttending"/>
+  <HASO:isActionTendencyOf rdf:resource="#neutral"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#noattending23">
+  <rdf:type rdf:resource="#NoAttending"/>
+  <HASO:isActionTendencyOf rdf:resource="#neutral"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#avoidance3">
+  <rdf:type rdf:resource="#Avoidance"/>
+  <HASO:isActionTendencyOf rdf:resource="#scared"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#approach6">
+  <rdf:type rdf:resource="#Approach"/>
+  <HASO:isActionTendencyOf rdf:resource="#happy"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#noattending24">
+  <rdf:type rdf:resource="#NoAttending"/>
+  <HASO:isActionTendencyOf rdf:resource="#neutral"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#noattending25">
+  <rdf:type rdf:resource="#NoAttending"/>
+  <HASO:isActionTendencyOf rdf:resource="#neutral"/>
+</owl:NamedIndividual>
+
+<rdfs:Datatype rdf:about="http://org.semanticweb.owlapi/error#Error1"/>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#Facial_Recognition"/>
+    <rdf:Description rdf:about="#Gestures_Recognition"/>
+    <rdf:Description rdf:about="#Voice_Recognition"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+<owl:Axiom>
+  <owl:annotatedSource rdf:resource="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#duration"/>
+  <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#range"/>
+  <owl:annotatedTarget rdf:resource="http://org.semanticweb.owlapi/error#Error1"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duration  unit = Second</rdfs:comment>
+</owl:Axiom>
+
+
+</rdf:RDF>
