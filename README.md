@@ -36,4 +36,13 @@ Se observa la conexi√≥n entre las emociones y las clases de Action Tendency seg√
 ![image](https://github.com/user-attachments/assets/92eb22bb-a908-49b8-86d2-7f08b36889a6)
 
 Trabajamos con: Software base utilizado para registrar el rostro humano y las emociones encontradas y obtener las probabilidades de estas emociones. (https://github.com/omar-aymen/Emotion-recognition#p1).
+
 ![image](https://github.com/user-attachments/assets/1073b38e-ecb1-4267-a08a-3615cabdae86)
+
+SCREENSHOTS
+
+![image](https://github.com/user-attachments/assets/95311814-ba01-49f6-9455-6b3d99c224da)
+![image](https://github.com/user-attachments/assets/36fbd765-517d-4eb2-83ca-a53b5a6f857b)
+
+
+
