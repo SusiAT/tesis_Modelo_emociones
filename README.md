@@ -35,3 +35,5 @@ Observaciones:
 Se observa la conexión entre las emociones y las clases de Action Tendency según la teoría de Frijda.
 ![image](https://github.com/user-attachments/assets/92eb22bb-a908-49b8-86d2-7f08b36889a6)
 
+Trabajamos con: Software base utilizado para registrar el rostro humano y las emociones encontradas y obtener las probabilidades de estas emociones. (https://github.com/omar-aymen/Emotion-recognition#p1).
+![image](https://github.com/user-attachments/assets/1073b38e-ecb1-4267-a08a-3615cabdae86)
