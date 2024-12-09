@@ -1,5 +1,5 @@
 # tesis_Modelo_emociones
-Describe todos los experimentos realizados en la tesis Modelo ubicuo de análisis emocional en clases en línea
+Describe todos los experimentos realizados en la tesis Modelo ubicuo de análisis emocional para clases en línea
 # Descripción del Código
 El código es un script en Python que utiliza diversas bibliotecas como Keras, OpenCV, Owlready2, Matplotlib, y NetworkX para analizar expresiones faciales en videos, calcular porcentajes de emociones, realizar K-Means clustering, y construir una ontología de Action Tendency con Emociones.
 Carga de Bibliotecas:
@@ -33,3 +33,5 @@ Guarda resultados y estadísticas en archivos de texto y CSV.
 Observaciones:
 
 Se observa la conexión entre las emociones y las clases de Action Tendency según la teoría de Frijda.
+![image](https://github.com/user-attachments/assets/92eb22bb-a908-49b8-86d2-7f08b36889a6)
+
