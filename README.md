@@ -50,6 +50,8 @@ Jena java lib and others: https://jena.apache.org/
 
 Ontologìa: HASIO.owl
 
+INSTRUCCIONES PARA EJECUTAR EL GUI
+
 SCREENSHOTS
 
 ![image](https://github.com/user-attachments/assets/95311814-ba01-49f6-9455-6b3d99c224da)
