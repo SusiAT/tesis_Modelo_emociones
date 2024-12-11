@@ -39,6 +39,13 @@ Trabajamos con: Software base utilizado para registrar el rostro humano y las em
 
 ![image](https://github.com/user-attachments/assets/1073b38e-ecb1-4267-a08a-3615cabdae86)
 
+Requerimientos
+
+Product Version: Apache NetBeans IDE 11.3
+Java: 1.8.0_333; Java HotSpot(TM) 64-Bit Server VM 25.333-b02
+System: Windows 11 version 10.0 running on amd64; Cp1252; es_EC (nb)
+Jena java lib and others: https://jena.apache.org/
+
 SCREENSHOTS
 
 ![image](https://github.com/user-attachments/assets/95311814-ba01-49f6-9455-6b3d99c224da)
