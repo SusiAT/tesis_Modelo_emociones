@@ -40,8 +40,8 @@ Trabajamos con: Software base utilizado para registrar el rostro humano y las em
 ![image](https://github.com/user-attachments/assets/1073b38e-ecb1-4267-a08a-3615cabdae86)
 
 1. El programa permite ejecutar dos procesos principales:
-  - Action-Tendency: Análisis detallado del comportamiento de los estudiantes mediante videos, algoritmos de clustering y tendencias a la acción.
-  - Pareto: Generación del gráfico de Pareto para analizar las emociones predominantes de todos los estudiantes.
+    - Action-Tendency: Análisis detallado del comportamiento de los estudiantes mediante videos, algoritmos de clustering y tendencias a la acción.
+    - Pareto: Generación del gráfico de Pareto para analizar las emociones predominantes de todos los estudiantes.
   
 2. Requisitos Previos
    
