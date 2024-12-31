@@ -47,9 +47,9 @@ Trabajamos con: Software base utilizado para registrar el rostro humano y las em
    
       2.1. Instalación de Python
       El programa requiere Python 3.11 instalado en tu equipo.
-      1. Descarga Python desde https://www.python.org/.
-      2. Durante la instalación, asegúrate de habilitar la opción "Add Python to PATH".
-      3. Verifica la instalación abriendo una terminal o consola y escribiendo: python --version.
+       - Descarga Python desde https://www.python.org/.
+       - Durante la instalación, asegúrate de habilitar la opción "Add Python to PATH".
+       - Verifica la instalación abriendo una terminal o consola y escribiendo: python --version.
    
       2.2. Instalación de Bibliotecas Requeridas
       Instala las bibliotecas necesarias mediante pip. Ejecuta el siguiente comando en la terminal:
@@ -70,7 +70,7 @@ Trabajamos con: Software base utilizado para registrar el rostro humano y las em
       - Action-Tendency: En D:/programa/resultados/[nombre_archivo]/
       - Pareto: En D:/programa/resultados/Pareto/
     
-3. Instrucciones de Ejecución
+4. Instrucciones de Ejecución
       1. Asegúrate de tener el archivo principal con el código (mubicuo.py) y colócalo en una carpeta accesible.
       2. Abre una terminal o consola.
       3. Navega a la carpeta donde está el archivo mubicuo.py.
@@ -99,8 +99,6 @@ A continuación, se presenta la captura de pantalla.
         Correo Electrónico: susi.alexa@gmail.com
 6. Diagrama de flujo
         Diagrama de flujo para la instalación del programa de análisis emocional para clases en línea.
-
-![image](https://github.com/user-attachments/assets/6510781e-ea48-47dc-badf-4c27dc7510e6)
 
 
 ![image](https://github.com/user-attachments/assets/26867f32-a052-4a8d-96b8-ecb575da57a2)
