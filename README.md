@@ -42,7 +42,9 @@ Trabajamos con: Software base utilizado para registrar el rostro humano y las em
 1. El programa permite ejecutar dos procesos principales:
 - Action-Tendency: Análisis detallado del comportamiento de los estudiantes mediante videos, algoritmos de clustering y tendencias a la acción.
 - Pareto: Generación del gráfico de Pareto para analizar las emociones predominantes de todos los estudiantes.
+  
 2. Requisitos Previos
+   
 2.1. Instalación de Python
 El programa requiere Python 3.11 instalado en tu equipo.
 1. Descarga Python desde https://www.python.org/.
