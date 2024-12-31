@@ -48,9 +48,11 @@ El programa requiere Python 3.11 instalado en tu equipo.
 1. Descarga Python desde https://www.python.org/.
 2. Durante la instalación, asegúrate de habilitar la opción "Add Python to PATH".
 3. Verifica la instalación abriendo una terminal o consola y escribiendo: python --version.
+   
 2.2. Instalación de Bibliotecas Requeridas
 Instala las bibliotecas necesarias mediante pip. Ejecuta el siguiente comando en la terminal:
 pip install tkinter pandas matplotlib keras imutils opencv-python owlready2 scikit-learn Jena java lib and others: https://jena.apache.org/
+
 2.3. Archivos del Programa
 El programa requiere los siguientes archivos en sus rutas correspondientes:
 - autoridad.py: Para el análisis de Action-Tendency.
@@ -60,6 +62,7 @@ El programa requiere los siguientes archivos en sus rutas correspondientes:
 - HASIO.owl: Archivo de ontología utilizado en Action-Tendency.
   - Ubicación esperada: D:/programa/HASIO.owl
 - Videos de los estudiantes: Ubicados en D:/programa/videosestudiantes/
+  
 2.4. Ruta de Resultados
 Los resultados generados se guardan en las siguientes carpetas, dependiendo del proceso ejecutado:
 - Action-Tendency: En D:/programa/resultados/[nombre_archivo]/
