@@ -45,36 +45,36 @@ Trabajamos con: Software base utilizado para registrar el rostro humano y las em
   
 2. Requisitos Previos
    
-  2.1. Instalación de Python
-  El programa requiere Python 3.11 instalado en tu equipo.
-  1. Descarga Python desde https://www.python.org/.
-  2. Durante la instalación, asegúrate de habilitar la opción "Add Python to PATH".
-  3. Verifica la instalación abriendo una terminal o consola y escribiendo: python --version.
+      2.1. Instalación de Python
+      El programa requiere Python 3.11 instalado en tu equipo.
+      1. Descarga Python desde https://www.python.org/.
+      2. Durante la instalación, asegúrate de habilitar la opción "Add Python to PATH".
+      3. Verifica la instalación abriendo una terminal o consola y escribiendo: python --version.
    
-  2.2. Instalación de Bibliotecas Requeridas
-  Instala las bibliotecas necesarias mediante pip. Ejecuta el siguiente comando en la terminal:
-  pip install tkinter pandas matplotlib keras imutils opencv-python owlready2 scikit-learn Jena java lib and others: https://jena.apache.org/
+      2.2. Instalación de Bibliotecas Requeridas
+      Instala las bibliotecas necesarias mediante pip. Ejecuta el siguiente comando en la terminal:
+      pip install tkinter pandas matplotlib keras imutils opencv-python owlready2 scikit-learn Jena java lib and others:                    https://jena.apache.org/
 
-  2.3. Archivos del Programa
-  El programa requiere los siguientes archivos en sus rutas correspondientes:
-  - autoridad.py: Para el análisis de Action-Tendency.
-    - Ubicación esperada: D:/programa/autoridad.py
-  - Pareto.py: Para generar gráficos de Pareto.
-    - Ubicación esperada: D:/programa/Pareto/Pareto.py
-  - HASIO.owl: Archivo de ontología utilizado en Action-Tendency.
-    - Ubicación esperada: D:/programa/HASIO.owl
-  - Videos de los estudiantes: Ubicados en D:/programa/videosestudiantes/
+      2.3. Archivos del Programa
+      El programa requiere los siguientes archivos en sus rutas correspondientes:
+      - autoridad.py: Para el análisis de Action-Tendency.
+        - Ubicación esperada: D:/programa/autoridad.py
+      - Pareto.py: Para generar gráficos de Pareto.
+        - Ubicación esperada: D:/programa/Pareto/Pareto.py
+      - HASIO.owl: Archivo de ontología utilizado en Action-Tendency.
+        - Ubicación esperada: D:/programa/HASIO.owl
+      - Videos de los estudiantes: Ubicados en D:/programa/videosestudiantes/
   
-  2.4. Ruta de Resultados
-  Los resultados generados se guardan en las siguientes carpetas, dependiendo del proceso ejecutado:
-  - Action-Tendency: En D:/programa/resultados/[nombre_archivo]/
-  - Pareto: En D:/programa/resultados/Pareto/
+      2.4. Ruta de Resultados
+      Los resultados generados se guardan en las siguientes carpetas, dependiendo del proceso ejecutado:
+      - Action-Tendency: En D:/programa/resultados/[nombre_archivo]/
+      - Pareto: En D:/programa/resultados/Pareto/
     
 3. Instrucciones de Ejecución
-  1. Asegúrate de tener el archivo principal con el código (mubicuo.py) y colócalo en una carpeta accesible.
-  2. Abre una terminal o consola.
-  3. Navega a la carpeta donde está el archivo mubicuo.py.
-  4. Ejecuta el programa con python mubicuo.py.
+      1. Asegúrate de tener el archivo principal con el código (mubicuo.py) y colócalo en una carpeta accesible.
+      2. Abre una terminal o consola.
+      3. Navega a la carpeta donde está el archivo mubicuo.py.
+      4. Ejecuta el programa con python mubicuo.py.
 
 ![image](https://github.com/user-attachments/assets/818354e9-0301-4c56-8191-b43cff69dbe2)
 
@@ -93,12 +93,12 @@ A continuación, se presenta la captura de pantalla.
 ![image](https://github.com/user-attachments/assets/eefd2bbe-929a-4c24-a00b-cb277ae87800)
 
 4. Posibles Errores y Soluciones
-Consulta la sección de errores en el manual proporcionado.
+        Consulta la sección de errores en el manual proporcionado.
 5. Contacto para Soporte
-Nombre: Susana Arias
-Correo Electrónico: susi.alexa@gmail.com
+        Nombre: Susana Arias
+        Correo Electrónico: susi.alexa@gmail.com
 6. Diagrama de flujo
-Diagrama de flujo para la instalación del programa de análisis emocional para clases en línea.
+        Diagrama de flujo para la instalación del programa de análisis emocional para clases en línea.
 
 ![image](https://github.com/user-attachments/assets/6510781e-ea48-47dc-badf-4c27dc7510e6)
 
