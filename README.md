@@ -17,6 +17,9 @@ Procesamiento de Videos:
     Lee y procesa videos desde un directorio.
     Detecta rostros y predice emociones utilizando un modelo preentrenado.
     Calcula porcentajes de emociones y los guarda en archivos csv.
+    Trabajamos con: Software base utilizado para registrar el rostro humano y las emociones encontradas y obtener las probabilidades de estas emociones. (https://github.com/omar-aymen/Emotion-recognition#p1).
+
+![image](https://github.com/user-attachments/assets/1073b38e-ecb1-4267-a08a-3615cabdae86)
     
 Análisis de Datos:
 
@@ -40,9 +43,6 @@ Resultados:
 
 ![image](https://github.com/user-attachments/assets/92eb22bb-a908-49b8-86d2-7f08b36889a6)
 
-Trabajamos con: Software base utilizado para registrar el rostro humano y las emociones encontradas y obtener las probabilidades de estas emociones. (https://github.com/omar-aymen/Emotion-recognition#p1).
-
-![image](https://github.com/user-attachments/assets/1073b38e-ecb1-4267-a08a-3615cabdae86)
 
 1. El programa permite ejecutar dos procesos principales:
     - Action-Tendency: Análisis detallado del comportamiento de los estudiantes mediante videos, algoritmos de clustering y tendencias a la acción.
