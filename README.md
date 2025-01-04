@@ -36,10 +36,8 @@ Creación de Gráfico de Red:
 Resultados:
 
     Guarda resultados y estadísticas en archivos de texto y CSV.
-    
-Observaciones:
 
-Se observa la conexión entre las emociones y las clases de Action_Tendency según la teoría de Frijda.
+
 ![image](https://github.com/user-attachments/assets/92eb22bb-a908-49b8-86d2-7f08b36889a6)
 
 Trabajamos con: Software base utilizado para registrar el rostro humano y las emociones encontradas y obtener las probabilidades de estas emociones. (https://github.com/omar-aymen/Emotion-recognition#p1).
@@ -86,7 +84,7 @@ Trabajamos con: Software base utilizado para registrar el rostro humano y las em
 
 ![image](https://github.com/user-attachments/assets/818354e9-0301-4c56-8191-b43cff69dbe2)
 
-La opción Action_Tendency realiza el análisis de cada video empezando por la identificación de las emociones básicas mediante el software Emotion Recognition, para luego crear clusters de emociones que servirán para instanciar la ontología HASIO hasta obtener finalmente las tendencias a la acción.
+La opción Action_Tendency realiza el análisis de cada video empezando por la identificación de las emociones básicas mediante el software Emotion Recognition, para luego crear clusters de emociones que servirán para instanciar la ontología HASIO hasta obtener finalmente las tendencias a la acción según la teoría de Frijda.
 A continuación, se presentan las imágenes que demuestran los pasos antes mencionados.
 
 ![image](https://github.com/user-attachments/assets/24cf2732-de76-498b-99ca-a9465c5348ae)
