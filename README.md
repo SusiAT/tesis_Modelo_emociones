@@ -57,9 +57,10 @@ Trabajamos con: Software base utilizado para registrar el rostro humano y las em
 
       2.3. Archivos del Programa
       El programa requiere los siguientes archivos en sus rutas correspondientes:
+      - mubicuo.py: Es el frontal principal que llama a los programas Action-Tendency y Pareto.
       - autoridad.py: Para el análisis de Action-Tendency.
         - Ubicación esperada: D:/programa/autoridad.py
-      - Pareto.py: Para generar gráficos de Pareto.
+      - Pareto.py: Para generar gráfico de Pareto.
         - Ubicación esperada: D:/programa/Pareto/Pareto.py
       - HASIO.owl: Archivo de ontología utilizado en Action-Tendency.
         - Ubicación esperada: D:/programa/HASIO.owl
