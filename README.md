@@ -52,8 +52,11 @@ La metodología del modelo ubicuo de análisis emocional, aplicada en clases en 
 
 El programa permite ejecutar dos procesos principales:
 
-    - Action-Tendency:  realiza el análisis de cada video empezando por la identificación de las emociones básicas mediante el software Emotion Recognition, para luego     crear clusters de emociones que servirán para instanciar la ontología HASIO hasta obtener finalmente las tendencias a la acción según la teoría de Frijda.
-    - Pareto: realiza el análisis de las emociones predominantes de todos los videos grabados; es decir identifica las emociones predominantes de todo el grupo de           estudiantes y finalmente lo grafica mediante un diagrama de Pareto.
+    - Action-Tendency:  realiza el análisis de cada video empezando por la identificación de las emociones básicas mediante el software 
+    Emotion Recognition, para luego crear clusters de emociones que servirán para instanciar la ontología HASIO hasta obtener finalmente 
+    las tendencias a la acción según la teoría de Frijda.
+    - Pareto: realiza el análisis de las emociones predominantes de todos los videos grabados; es decir identifica las emociones predominantes
+    de todo el grupo de estudiantes y finalmente lo grafica mediante un diagrama de Pareto.
   
 Archivos del Programa
 
