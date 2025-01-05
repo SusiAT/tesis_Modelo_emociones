@@ -96,7 +96,7 @@ A continuación, se presentan las imágenes que demuestran los pasos antes menci
 
 ![image](https://github.com/user-attachments/assets/79e431b5-29df-459c-8ca5-002251dabb82)
 
-3. El siguiente paso es agrupar las emociones que obtuvo el software de reconocimiento de emociones aplicando el algoritmo KMEANS. Finalmente, estos clusters emocionales se han instanciado en la ontología HASIO y se obtiene las tendencias a la acción por cada estudiante. Este paso se realiza automáticamente cuando se elige la opción _Action_Tendency_.
+3. El siguiente paso es agrupar las emociones que obtuvo el software de reconocimiento de emociones aplicando el algoritmo KMEANS. Finalmente, estos clusters emocionales se instancian en la ontología HASIO y se obtiene las tendencias a la acción por cada estudiante. Este paso se realiza automáticamente cuando se elige la opción _Action_Tendency_.
 
 ![image](https://github.com/user-attachments/assets/35acc9be-453e-48df-943e-60a874e94d60)
 
