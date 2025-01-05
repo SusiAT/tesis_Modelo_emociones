@@ -90,13 +90,13 @@ A continuación, se presentan las imágenes que demuestran los pasos antes menci
 
 ![image](https://github.com/user-attachments/assets/818354e9-0301-4c56-8191-b43cff69dbe2)
 
-2. Identificación de emociones básicas es el primer paso cuando se elige la opción _Action_Tendency_.
+2. Al elegir la opción _Action_Tendency_ se identifica las emociones básicas para cada estudiante.
 
 ![image](https://github.com/user-attachments/assets/24cf2732-de76-498b-99ca-a9465c5348ae)
 
 ![image](https://github.com/user-attachments/assets/79e431b5-29df-459c-8ca5-002251dabb82)
 
-3. El siguiente paso es agrupar las emociones que obtuvo el software de reconocimiento de emociones aplicando el algoritmo KMEANS. Finalmente, estos clusters emocionales se han instanciado en la ontología HASIO y se obtiene las tendencias a la acción por cada estudiante.
+3. El siguiente paso es agrupar las emociones que obtuvo el software de reconocimiento de emociones aplicando el algoritmo KMEANS. Finalmente, estos clusters emocionales se han instanciado en la ontología HASIO y se obtiene las tendencias a la acción por cada estudiante. Este paso se realiza automáticamente cuando se elige la opción _Action_Tendency_.
 
 ![image](https://github.com/user-attachments/assets/35acc9be-453e-48df-943e-60a874e94d60)
 
