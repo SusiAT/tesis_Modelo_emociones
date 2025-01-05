@@ -1,7 +1,7 @@
 # tesis_Modelo_emociones
 Describe todos los experimentos realizados en la tesis Modelo ubicuo de análisis emocional para clases en línea reunidos en un solo programa.
 # Descripción del Código
-<p style="text-align: justify;"> El código es un script en Python que utiliza diversas bibliotecas como Keras, OpenCV, Owlready2, Matplotlib, y NetworkX para identificar las emociones básicas en el rostro de los estudiantes, determinar emociones predominantes, verificar si las emociones básicas pueden crear clusters emocionales y finalmente usar estos clusters para inferir tendencias a la acción para el aprendizaje mediante una interpretación semántica ontológica durante clases en línea grabadas en video, que sirvan de base para la retroalimentación en el proceso de enseñanza – aprendizaje. </p>
+El código es un script en Python que utiliza diversas bibliotecas como Keras, OpenCV, Owlready2, Matplotlib, y NetworkX para identificar las emociones básicas en el rostro de los estudiantes, determinar emociones predominantes, verificar si las emociones básicas pueden crear clusters emocionales y finalmente usar estos clusters para inferir tendencias a la acción para el aprendizaje mediante una interpretación semántica ontológica durante clases en línea grabadas en video, que sirvan de base para la retroalimentación en el proceso de enseñanza – aprendizaje.
 
 Carga de Bibliotecas:
 
@@ -51,11 +51,10 @@ Resultados:
 La metodología del modelo ubicuo de análisis emocional, aplicada en clases en línea, permite registrar y analizar emociones detectadas en los rostros de los estudiantes, así como también inferir y validar las tendencias a la acción para el aprendizaje.
 
 El programa permite ejecutar dos procesos principales:
-
-    - Action-Tendency:  realiza el análisis de cada video empezando por la identificación de las emociones básicas mediante el software 
+   - Action-Tendency:  realiza el análisis de cada video empezando por la identificación de las emociones básicas mediante el software 
     Emotion Recognition, para luego crear clusters de emociones que servirán para instanciar la ontología HASIO hasta obtener finalmente 
     las tendencias a la acción según la teoría de Frijda.
-    - Pareto: realiza el análisis de las emociones predominantes de todos los videos grabados; es decir identifica las emociones predominantes
+   - Pareto: realiza el análisis de las emociones predominantes de todos los videos grabados; es decir identifica las emociones predominantes
     de todo el grupo de estudiantes y finalmente lo grafica mediante un diagrama de Pareto.
   
 Archivos del Programa
