@@ -1,0 +1,1080 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#"
+     xml:base="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:HASO="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#"
+     xmlns:ace_="http://attempto.ifi.uzh.ch/ace_lexicon#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO">
+        <rdfs:comment>Ontology for the  Affective States  ( Emotion , Mood, Sentiment )  Causes and Reaction 
+
+Is it a  sub-ontology from  Human Affective States  Ontology(HASO)</rdfs:comment>
+        <rdfs:comment>Ontology for the  Affective States  ( Emotion , Mood, Sentiment )  Recognition Method 
+
+Is it a  sub-ontology from  Human Affective States  Ontology(HASO)</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl -->
+
+    <owl:AnnotationProperty rdf:about="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+    
+
+
+    <!-- http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg -->
+
+    <owl:AnnotationProperty rdf:about="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+    
+
+
+    <!-- http://attempto.ifi.uzh.ch/ace_lexicon#TV_pl -->
+
+    <owl:AnnotationProperty rdf:about="http://attempto.ifi.uzh.ch/ace_lexicon#TV_pl"/>
+    
+
+
+    <!-- http://attempto.ifi.uzh.ch/ace_lexicon#TV_sg -->
+
+    <owl:AnnotationProperty rdf:about="http://attempto.ifi.uzh.ch/ace_lexicon#TV_sg"/>
+    
+
+
+    <!-- http://attempto.ifi.uzh.ch/ace_lexicon#TV_vbg -->
+
+    <owl:AnnotationProperty rdf:about="http://attempto.ifi.uzh.ch/ace_lexicon#TV_vbg"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://org.semanticweb.owlapi/error#Error1 -->
+
+    <rdfs:Datatype rdf:about="http://org.semanticweb.owlapi/error#Error1"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#causes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#causes">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#isCausedBy"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Affective_State_Cause"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Emotion_Causes"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Mood_Causes"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Affective_State"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Emotion"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Mood"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#hasActionTendency -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#hasActionTendency">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#isActionTendencyOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Emotion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#ActionTendency"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#hasDuration -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#hasDuration">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Affective_State"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Emotion"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Mood"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#duration"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#isActionTendencyOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#isActionTendencyOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#ActionTendency"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Emotion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#isCausedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#isCausedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Affective_State"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Emotion"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Mood"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Affective_State_Cause"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Emotion_Causes"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Mood_Causes"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <ace_:TV_pl>isCausedBy</ace_:TV_pl>
+        <ace_:TV_sg>isCausedBies</ace_:TV_sg>
+        <ace_:TV_vbg>isCausedBied</ace_:TV_vbg>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#isDetectedFrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#isDetectedFrom">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#isSourceToDetect"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Affective_State"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Emotion"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Mood"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Sentiment"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Affective_State_Recognition"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Emotion_Recognition"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Mood_Recognition"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Sentiment_Recognition"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#isSourceToDetect -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#isSourceToDetect">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Affective_State_Recognition"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Emotion_Recognition"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Mood_Recognition"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Sentiment_Recognition"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Affective_State"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Emotion"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Mood"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Sentiment"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#appraisal -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#appraisal">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Appraisal"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</xsd:minExclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:maxExclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment>Describe positive or negative values of the properties</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#duration -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#duration">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Emotion"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Mood"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://org.semanticweb.owlapi/error#Error1"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#duration"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#range"/>
+        <owl:annotatedTarget rdf:resource="http://org.semanticweb.owlapi/error#Error1"/>
+        <rdfs:comment>Duration  unit = Second</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#ActionTendency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#ActionTendency">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#isActionTendencyOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Emotion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Affective_State_Cause"/>
+        <ace_:CN_pl>ActionTendencies</ace_:CN_pl>
+        <ace_:CN_sg>ActionTendency</ace_:CN_sg>
+        <rdfs:comment>Emotions have a strong influence on the motivational state of a subject. Emotion theory associates emotions to a small set of so-called action tendencies, e.g. avoidance (relates to fear), rejecting (disgust) etc. Action tendencies can be viewed as a link between the outcome of an appraisal process and actual actions.</rdfs:comment>
+        <rdfs:comment>Import From HEO</rdfs:comment>
+        <rdfs:label>Action Tendency</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Aesthetic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Aesthetic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Goals/needs"/>
+        <ace_:CN_pl>Aesthetics</ace_:CN_pl>
+        <ace_:CN_sg>Aesthetic</ace_:CN_sg>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Affective_State -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Affective_State">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Mental-State"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#isCausedBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Affective_State_Cause"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#isDetectedFrom"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Affective_State_Recognition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ace_:CN_pl>Affective_stateses</ace_:CN_pl>
+        <ace_:CN_sg>Affective_states</ace_:CN_sg>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Affective_State_Cause -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Affective_State_Cause"/>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Affective_State_Recognition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Affective_State_Recognition">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#isSourceToDetect"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Affective_State"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment>Ways to detect or recognize Affective States</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Agency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Agency">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Appraisal"/>
+        <ace_:CN_pl>Agencies</ace_:CN_pl>
+        <ace_:CN_sg>Agency</ace_:CN_sg>
+        <rdfs:comment>The individual&apos;s ability to influence or cope with the consequences of the event</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Appraisal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Appraisal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Emotion_Causes"/>
+        <ace_:CN_pl>Appraisals</ace_:CN_pl>
+        <ace_:CN_sg>Appraisal</ace_:CN_sg>
+        <rdfs:comment>Apprisal means emotions are elicited and differentiated on the basis of a person&apos;s subjective evaluation</rdfs:comment>
+        <rdfs:comment>The Defnition  from &quot; Appraisal Theory&quot; By &quot;Klaus R. Scherer&quot;</rdfs:comment>
+        <rdfs:comment>cognitive</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Approach -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Approach">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Frijda_Action_Tendency"/>
+        <ace_:CN_pl>Approaches</ace_:CN_pl>
+        <ace_:CN_sg>Approach</ace_:CN_sg>
+        <rdfs:comment>Approach (FrijdaActionTendency ) [aimed towards access and consummatory activity, related to desire]</rdfs:comment>
+        <rdfs:label>Approach</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Attending -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Attending">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Frijda_Action_Tendency"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Avoidance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Avoidance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Frijda_Action_Tendency"/>
+        <ace_:CN_pl>Avoidances</ace_:CN_pl>
+        <ace_:CN_sg>Avoidance</ace_:CN_sg>
+        <rdfs:comment>Avoidance (FrijdaActionTendency ) [aimed towards own inaccessibility and protection, related to fear]</rdfs:comment>
+        <rdfs:label>Avoidance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Beingwith -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Beingwith">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Frijda_Action_Tendency"/>
+        <ace_:CN_pl>Being-withs</ace_:CN_pl>
+        <ace_:CN_sg>Being-with</ace_:CN_sg>
+        <rdfs:comment>Being with (FrijdaActionTendency ) [aimed at contact and interaction, related to enjoyment]</rdfs:comment>
+        <rdfs:label>Being with</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Blood_Volume_Pulse_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Blood_Volume_Pulse_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Physiological_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Cognitive -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Cognitive">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Goals/needs"/>
+        <ace_:CN_pl>Cognitives</ace_:CN_pl>
+        <ace_:CN_sg>Cognitive</ace_:CN_sg>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Contagion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Contagion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Emotion_Causes"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Mood_Causes"/>
+        <ace_:CN_pl>cotagions</ace_:CN_pl>
+        <ace_:CN_sg>cotagion</ace_:CN_sg>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Dominating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Dominating">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Frijda_Action_Tendency"/>
+        <ace_:CN_pl>Dominatings</ace_:CN_pl>
+        <ace_:CN_sg>Dominating</ace_:CN_sg>
+        <rdfs:comment>Dominating (FrijdaActionTendency ) [aimed at retained control, related to arrogance]</rdfs:comment>
+        <rdfs:label>Dominating</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Electrocardiogram_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Electrocardiogram_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Physiological_Sensor"/>
+        <ace_:CN_pl>Electrocardiogram_sensors</ace_:CN_pl>
+        <ace_:CN_sg>Electrocardiogram_sensor</ace_:CN_sg>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Electromyography_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Electromyography_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Physiological_Sensor"/>
+        <ace_:CN_pl>Electromyography__Sensors</ace_:CN_pl>
+        <ace_:CN_sg>Electromyography__Sensor</ace_:CN_sg>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Emotion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Emotion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Affective_State"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Mood_Causes"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#hasActionTendency"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#ActionTendency"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#isCausedBy"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Emotion_Causes"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#isDetectedFrom"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Emotion_Recognition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ace_:CN_pl>Emotion is the result of a person’s exposure to an internal or external stimulus and is expressed by changes in facial expression, gesture, voice or physiological parameters</ace_:CN_pl>
+        <ace_:CN_sg>Emotion</ace_:CN_sg>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Emotion_Causes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Emotion_Causes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Affective_State_Cause"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#causes"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Emotion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ace_:CN_pl>Emotion_Causeses</ace_:CN_pl>
+        <ace_:CN_sg>Emotion_Causes</ace_:CN_sg>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Emotion_Recognition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Emotion_Recognition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Affective_State_Recognition"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#isSourceToDetect"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Emotion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ace_:CN_pl>Emotion_Recognitions</ace_:CN_pl>
+        <ace_:CN_sg>Emotion_Recognition</ace_:CN_sg>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Esteem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Esteem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Goals/needs"/>
+        <ace_:CN_pl>Esteems</ace_:CN_pl>
+        <ace_:CN_sg>Esteem</ace_:CN_sg>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Facial_Recognition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Facial_Recognition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Mobile_Device"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Recorded_Video"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Still_Image"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Surveillance_Camera"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Frijda_Action_Tendency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Frijda_Action_Tendency">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#ActionTendency"/>
+        <ace_:CN_pl>FrijdaActionTendencies</ace_:CN_pl>
+        <ace_:CN_sg>FrijdaActionTendency</ace_:CN_sg>
+        <rdfs:comment>An action tendency defined by Nico Frijda, who also coined the term &apos;action tendency&apos;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Gestures_Recognition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Gestures_Recognition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Mobile_Device"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Recorded_Video"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Surveillance_Camera"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Haptic-Devices -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Haptic-Devices">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Emotion_Recognition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Heart_Rate_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Heart_Rate_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Physiological_Sensor"/>
+        <ace_:CN_pl>Heart_Rate_Sensors</ace_:CN_pl>
+        <ace_:CN_sg>Heart_Rate_Sensor</ace_:CN_sg>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Interrupting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Interrupting">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Frijda_Action_Tendency"/>
+        <ace_:CN_pl>Interruptings</ace_:CN_pl>
+        <ace_:CN_sg>Interrupting</ace_:CN_sg>
+        <rdfs:comment>Interrupting (FrijdaActionTendency ) [aimed at reorientation, related to shock and surprise]</rdfs:comment>
+        <rdfs:label>Interrupting</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Mental-State -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Mental-State">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment>A mental state is a state of mind</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Mobile_Brainwave_Sensors -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Mobile_Brainwave_Sensors">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Neurological_Response_Sensor"/>
+        <ace_:CN_pl>mobile_brainwave_sensors_(EEG)</ace_:CN_pl>
+        <ace_:CN_sg>mobile_brainwave_sensors_(EEG)</ace_:CN_sg>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Mobile_Device -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Mobile_Device">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Emotion_Recognition"/>
+        <ace_:CN_pl>Mobile_Device_(_Voice,_facical,_gestures)</ace_:CN_pl>
+        <ace_:CN_sg>Mobile_Device_(_Voice,_facical,_gestures)</ace_:CN_sg>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Mood -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Mood">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Affective_State"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Emotion_Causes"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#isCausedBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Mood_Causes"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#isDetectedFrom"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Mood_Recognition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ace_:CN_pl>Moods</ace_:CN_pl>
+        <ace_:CN_sg>Mood</ace_:CN_sg>
+        <rdfs:comment>Mood is an emotional state that affects the experience and behavior of a person. It has a lower intensity but a longer duration than emotion</rdfs:comment>
+        <rdfs:comment>emotional state</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Mood_Causes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Mood_Causes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Affective_State_Cause"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#causes"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Mood"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Mood_Recognition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Mood_Recognition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Affective_State_Recognition"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#isSourceToDetect"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Mood"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Neurological_Response_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Neurological_Response_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Sensor"/>
+        <ace_:CN_pl>Sensor_(Neurological_Response_)</ace_:CN_pl>
+        <ace_:CN_sg>Sensor_(Neurological_Response_)</ace_:CN_sg>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Nonattending -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Nonattending">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Frijda_Action_Tendency"/>
+        <ace_:CN_pl>Nonattendings</ace_:CN_pl>
+        <ace_:CN_sg>Nonattending</ace_:CN_sg>
+        <rdfs:comment>Nonattending (FrijdaActionTendency ) [aimed at selecting, related to indifference]</rdfs:comment>
+        <rdfs:label>Nonattending</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Novelty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Novelty">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Appraisal"/>
+        <ace_:CN_pl>Novelties</ace_:CN_pl>
+        <ace_:CN_sg>Novelty</ace_:CN_sg>
+        <rdfs:comment>Intrinsic characteristics of objects or events, such as novelty or agreeableness</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Physiological -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Physiological">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Goals/needs"/>
+        <ace_:CN_pl>Physiologicals</ace_:CN_pl>
+        <ace_:CN_sg>Physiological</ace_:CN_sg>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Physiological_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Physiological_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Sensor"/>
+        <ace_:CN_pl>Sensor_(Physiological_)</ace_:CN_pl>
+        <ace_:CN_sg>Sensor_(Physiological_)</ace_:CN_sg>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Previous_Emotion_State -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Previous_Emotion_State">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Emotion_Causes"/>
+        <ace_:CN_pl>Previous_Emotion_States</ace_:CN_pl>
+        <ace_:CN_sg>Previous_Emotion_State</ace_:CN_sg>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Recorded_Video -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Recorded_Video">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Emotion_Recognition"/>
+        <ace_:CN_pl>Viedo_(_Voice,_facical,_gestures)</ace_:CN_pl>
+        <ace_:CN_sg>Viedo_(_Voice,_facical,_gestures)</ace_:CN_sg>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Rejecting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Rejecting">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Frijda_Action_Tendency"/>
+        <ace_:CN_pl>Rejectings</ace_:CN_pl>
+        <ace_:CN_sg>Rejecting</ace_:CN_sg>
+        <rdfs:comment>Rejecting (FrijdaActionTendency ) [aimed at removal of object, related to disgust]</rdfs:comment>
+        <rdfs:label>Rejecting</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Respiration_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Respiration_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Physiological_Sensor"/>
+        <ace_:CN_pl>respiration_sensors</ace_:CN_pl>
+        <ace_:CN_sg>respiration_sensor</ace_:CN_sg>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Saftey_and_security -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Saftey_and_security">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Goals/needs"/>
+        <ace_:CN_pl>Saftey_and_securities</ace_:CN_pl>
+        <ace_:CN_sg>Saftey_and_security</ace_:CN_sg>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Self_actualization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Self_actualization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Goals/needs"/>
+        <ace_:CN_pl>Self_actualizations</ace_:CN_pl>
+        <ace_:CN_sg>Self_actualization</ace_:CN_sg>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Emotion_Recognition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Sentiment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Sentiment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Affective_State"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Emotion_Causes"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#isDetectedFrom"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Sentiment_Recognition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>a view of or attitude toward a situation or event; an opinion</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Sentiment_Recognition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Sentiment_Recognition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Affective_State_Recognition"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rabaa006/ontologies/2014/4/HASO#isSourceToDetect"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Sentiment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Skin_Conductance_Response_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Skin_Conductance_Response_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Physiological_Sensor"/>
+        <ace_:CN_pl>Skin_Conductance_Response_Sensors</ace_:CN_pl>
+        <ace_:CN_sg>Skin_Conductance_Response_Sensor</ace_:CN_sg>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Skin_Conductivity_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Skin_Conductivity_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Physiological_Sensor"/>
+        <ace_:CN_pl>skin_conductivity,_BVP_and_temperature_sensor</ace_:CN_pl>
+        <ace_:CN_sg>skin_conductivity,_BVP_and_temperature_sensor</ace_:CN_sg>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Skin_Temperature_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Skin_Temperature_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Physiological_Sensor"/>
+        <ace_:CN_pl>Skin_Temperature_Sensors</ace_:CN_pl>
+        <ace_:CN_sg>Skin_Temperature_Sensor</ace_:CN_sg>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Smart_Phone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Smart_Phone">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Mood_Recognition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Social_Media -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Social_Media">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Emotion_Recognition"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Mood_Recognition"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Sentiment_Recognition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Still_Image -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Still_Image">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Emotion_Recognition"/>
+        <ace_:CN_pl>Still_Image_(_facical)</ace_:CN_pl>
+        <ace_:CN_sg>Still_Image_(_facical)</ace_:CN_sg>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Submitting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Submitting">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Frijda_Action_Tendency"/>
+        <ace_:CN_pl>Submittings</ace_:CN_pl>
+        <ace_:CN_sg>Submitting</ace_:CN_sg>
+        <rdfs:comment>Submitting (FrijdaActionTendency ) [aimed at deflecting pressure, related to humility and resignation]</rdfs:comment>
+        <rdfs:label>Submitting</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Surveillance_Camera -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Surveillance_Camera">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Emotion_Recognition"/>
+        <ace_:CN_pl>Camera_(_Voice,_facical,_gestures)</ace_:CN_pl>
+        <ace_:CN_sg>Camera_(_Voice,_facical,_gestures)</ace_:CN_sg>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Transcendence -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Transcendence">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Goals/needs"/>
+        <ace_:CN_pl>Transcendences</ace_:CN_pl>
+        <ace_:CN_sg>Transcendence</ace_:CN_sg>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Voice_Recognition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Voice_Recognition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Mobile_Device"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Recorded_Video"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Surveillance_Camera"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#recorded_Voice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#recorded_Voice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#recorded_Voice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Emotion_Recognition"/>
+        <ace_:CN_pl>recorded_voice_(_voice)</ace_:CN_pl>
+        <ace_:CN_sg>recorded_voice_(_voice)</ace_:CN_sg>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Goals/needs -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Goals/needs">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Appraisal"/>
+        <ace_:CN_pl>Goals/needs</ace_:CN_pl>
+        <ace_:CN_sg>Goals/needs</ace_:CN_sg>
+        <rdfs:comment>The significance of the event for the individual&apos;s needs or goals</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Norms/Values -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Norms/Values">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Appraisal"/>
+        <ace_:CN_pl>Norms/Values</ace_:CN_pl>
+        <ace_:CN_sg>Norms/Values</ace_:CN_sg>
+        <rdfs:comment>The compatibility of the event with social or personal standards, norms, or values.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rabaa006/ontologies/2017/10/Affective_States_Recognition#IRejecting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rabaa006/ontologies/2017/10/Affective_States_Recognition#IRejecting"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#fr -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#fr">
+        <rdf:type rdf:resource="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Facial_Recognition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Facial_Recognition"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Gestures_Recognition"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/posgrado/ontologies/2020/4/FERO#Voice_Recognition"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
