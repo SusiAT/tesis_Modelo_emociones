@@ -1,8 +1,0 @@
-Cluster: 1 Emoción: neutral Valor: 75.7794701986755 Instancias:151 Clasificación:MAYOR Centroides:[4.30688742e+00 3.68874172e-02 5.51609272e+00 1.28675497e-01
- 1.40380795e+01 1.92450331e-01 7.57794702e+01]
-Cluster: 2 Emoción: neutral Valor: 45.85889705882353 Instancias:136 Clasificación:MENOR Centroides:[ 8.88036765  0.09794118 12.63455882  0.14948529 31.96007353  0.41823529
- 45.85889706]
-Cluster: 3 Emoción: neutral Valor: 60.72004975124378 Instancias:201 Clasificación:MAYOR Centroides:[6.23985075e+00 3.12935323e-02 1.00316915e+01 7.79452736e-01
- 2.03155224e+01 1.88124378e+00 6.07200498e+01]
-Cluster: 4 Emoción: sad Valor: 71.27799999999999 Instancias:15 Clasificación:MENOR Centroides:[ 3.70733333  0.532      19.09066667  4.418      71.278       0.07333333
-  0.89933333]
