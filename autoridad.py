@@ -486,6 +486,7 @@ def mostrar_nombres_de_archivos(ruta_directorio):
            Submitting: "Sad, Fear"
         }
 
+      #Llama al razonador para verificar inferencias e inconsistencias   
         with onto:
              sync_reasoner()
         # Iterar sobre las clases de Action Tendency
