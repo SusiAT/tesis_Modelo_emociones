@@ -486,7 +486,10 @@ def mostrar_nombres_de_archivos(ruta_directorio):
            Submitting: "Sad, Fear"
         }
 
-      #Llama al razonador para verificar inferencias e inconsistencias   
+      #Llama al razonador para verificar inferencias e inconsistencias  
+
+      with onto:
+            sync_reasoner_pellet(infer_property_values=True, debug=1)  # Activa Pellet con depuración
        
         # Iterar sobre las clases de Action Tendency
         for action_tendency_class in action_tendency_classes:
@@ -509,8 +512,7 @@ def mostrar_nombres_de_archivos(ruta_directorio):
                     # Agregar la instancia al grafo con la etiqueta de la emoción básica
                     G.add_node(basic_emotion, shape='ellipse')
                     G.add_edge(action_tendency_class.__name__, basic_emotion)
-        with onto:
-            sync_reasoner_pellet(infer_property_values=True, debug=1)  # Activa Pellet con depuración
+       
         # Dibujar el grafo
         plt.figure(figsize=(10, 6))
         pos = nx.spring_layout(G, seed=42)  # Layout para el grafo
